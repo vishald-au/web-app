@@ -44,7 +44,7 @@ const Products = () => {
                                 <Button className='btn-same' variant='contained' color='primary'><ShoppingBasketIcon fontSize='small' />  &nbsp;$800</Button>
                             </div>
                         </div>
-                         
+                        <div className='col-sm-12 manage-arrow'><KeyboardArrowDownIcon /></div>
                 </div>
                 <div className='row'>
                      

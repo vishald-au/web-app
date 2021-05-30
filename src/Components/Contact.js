@@ -1,7 +1,19 @@
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+    const notify = () => toast.info(sendmessage);
+
+    function sendmessage() {
+        return (
+            <div>Thank You!<br />
+                <small>Your message has been sent!</small>
+            </div>
+        )
+    }
+
     return (
         <div className='area'>
             <div className='container'>
@@ -41,7 +53,7 @@ const Contact = () => {
                                 defaultValue=" " 
                                 variant="outlined"
                             /> 
-                            <Button className='btn-same' variant='contained' color='primary'>Send</Button>
+                            <Button className='btn-same' onClick={notify} variant='contained' color='primary'>Send</Button>
                         </form>
                         </div>
                         

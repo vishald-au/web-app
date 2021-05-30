@@ -16,7 +16,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { useState } from 'react'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
         <Router>
           <div>
             <nav className='navbar navbar-expand-md navbar-light'>
-              <a href='/' className='navbar-brand'><GrainOutlinedIcon /> New App</a>
+              <a href='/' className='navbar-brand'><GrainOutlinedIcon /> WebApp</a>
               <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
                 <span className='navbar-toggler-icon'></span>
               </button>
@@ -117,6 +118,17 @@ function App() {
         <Footer />
         </div>
       </div>
+      <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+      />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import Image1 from '../a1.png'
 
 const Search = ({ search }) => {
 
@@ -37,7 +38,7 @@ const Search = ({ search }) => {
                                 <List className='searchList'>
                                     <ListItem alignItems="flex-start" key={pro.id}>
                                         <ListItemAvatar>
-                                        <Avatar src={pro.img} />
+                                        <Avatar src={Image1} />
                                         </ListItemAvatar>
                                         <ListItemText
                                         primary={pro.app} 
@@ -48,8 +49,8 @@ const Search = ({ search }) => {
                                                 variant="body2"
                                                 className='searchType'
                                                 color="textPrimary"
-                                            >{pro.version} - 
-                                            </Typography>
+                                            > 
+                                            </Typography>{pro.version} -&nbsp;
                                             {pro.details}<br />
                                             
                                             </React.Fragment>

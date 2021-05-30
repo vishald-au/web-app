@@ -61,7 +61,7 @@ code {
   font-size: 14px;
 }
 .navbar-brand {
-  font-size: 13px;
+  font-size: 13px !important;
   font-weight: 500;
 }
 
@@ -131,7 +131,7 @@ p{
   background: radial-gradient(circle, rgba(0,212,255,.3) 10%, rgba(255,255,255,0) 50%);
 }
 
-.effect-bg {background: radial-gradient(circle, rgba(0,212,255,.3) 10%, rgba(255,255,255,0) 50%);}
+.effect-bg {background: radial-gradient(circle, rgba(0,212,255,.3) 10%, rgba(255,255,255,0) 60%);}
 .effect-bg2 {
   background: radial-gradient(circle, rgba(0,212,255,.3) 30%, rgba(255,255,255,0) 71%);
   height: 100%;
