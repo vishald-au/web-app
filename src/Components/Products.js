@@ -4,7 +4,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Image1 from '../a1.png'
 import Image2 from '../a2.png'
 
-const Home = () => {
+const Products = () => {
     return (
         <div className='area'>
             <div className='container'>
@@ -90,4 +90,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Products

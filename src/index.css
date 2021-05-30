@@ -184,3 +184,50 @@ p{
 .expadding .MuiInputBase-root {
   margin-bottom: 20px;
 }
+
+.nav-item input,
+.nav-item svg {
+
+  font-size: 13px;
+  color: rgba(0,0,0,.5);
+
+
+}
+
+.nav-link.searchBox .MuiInput-underline:before{
+      border-bottom: 0;
+}
+.nav-link.searchBox.expand .MuiInput-underline:before{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+.nav-link.searchBox {
+  padding: 4px 10px 0 !important;
+  width: 10px;
+  cursor: pointer;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+.nav-link.searchBox.expand {
+  padding: 4px 10px 0 !important;
+  width: 100px;
+}
+
+.MuiAvatar-img {
+  width: 24px !important;
+  height: auto !important;
+}
+
+.MuiTypography-displayBlock {
+  max-height: 50px;
+  overflow: hidden;
+  font-size: 12px !important;
+}
+
+.MuiList-root {
+  max-width: 50%;
+  float: left;
+}
+

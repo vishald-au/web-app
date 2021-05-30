@@ -1,7 +1,7 @@
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-const Home = () => {
+const Contact = () => {
     return (
         <div className='area'>
             <div className='container'>
@@ -21,27 +21,27 @@ const Home = () => {
                         <div className='col-sm-12 col-md-6 expadding'>
 
                         <form noValidate autoComplete="off">
-                        <TextField
-                            id="outlined-helperText"
-                            label="Name"
-                            defaultValue=" " 
-                            variant="outlined"
-                        />
-                        <TextField
-                            id="outlined-helperText"
-                            label="Email"
-                            defaultValue=" " 
-                            variant="outlined"
-                        />
-                        <TextField
-                            id="outlined-multiline-static"
-                            label="Message"
-                            multiline
-                            rows={3}
-                            defaultValue=" " 
-                            variant="outlined"
-                        /> 
-                        <Button className='btn-same' variant='contained' color='primary'>Send</Button>
+                            <TextField
+                                id="name"
+                                label="Name"
+                                defaultValue=" " 
+                                variant="outlined"
+                            />
+                            <TextField
+                                id="email"
+                                label="Email"
+                                defaultValue=" " 
+                                variant="outlined"
+                            />
+                            <TextField
+                                id="message"
+                                label="Message"
+                                multiline
+                                rows={3}
+                                defaultValue=" " 
+                                variant="outlined"
+                            /> 
+                            <Button className='btn-same' variant='contained' color='primary'>Send</Button>
                         </form>
                         </div>
                         
@@ -52,4 +52,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Contact

@@ -1,7 +1,4 @@
-import Button from '@material-ui/core/Button';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-
-const Home = () => {
+const About = () => {
     return (
         <div className='area'>
             <div className='container'>
@@ -51,4 +48,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default About

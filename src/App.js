@@ -11,9 +11,28 @@ import Products from './Components/Products';
 import Services from './Components/Services';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import Search from './Components/Search';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import { useState } from 'react'
+
+
 
 function App() {
+
+  const [ expand, setExpand ] = useState(false)
+  const [ search, setSearch ] = useState('')
+ 
+  function handleSearch(e) {
+    setSearch(e.target.value)
+  }
+  function handleExpand() {
+    setExpand(true)
+  }
+  function closeSearch() {
+    setExpand(false)
+  }
 
   function Footer() {
     return <p className='footer'>© Copyright 2021 <span>+61 444 333 222</span></p>;
@@ -35,22 +54,37 @@ function App() {
               <div className='collapse navbar-collapse flex-end' id='navbarNav'>
                 <ul className='navbar-nav'>
                   <li className='nav-item'>
-                    <Link className='nav-link' to='/'>Home</Link>
+                    <Link className='nav-link' to='/' onClick={closeSearch}>Home</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' to='/products'>Products</Link>
+                    <Link className='nav-link' to='/products' onClick={closeSearch}>Products</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' to='/services'>Services</Link>
+                    <Link className='nav-link' to='/services' onClick={closeSearch}>Services</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' to='/about'>About</Link>
+                    <Link className='nav-link' to='/about' onClick={closeSearch}>About</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' to='/contact'>Contact</Link>
+                    <Link className='nav-link' to='/contact' onClick={closeSearch} >Contact</Link>
                   </li>
                   <li className='nav-item'>
-                    <a href='#' className='nav-link search'><SearchIcon/></a>
+                    <Link className={'nav-link searchBox '  + (expand && 'expand')} onClick={handleExpand} to='/search'>
+                    
+                          <TextField
+                            className='searchIconBar'
+                            id='searh'
+                            size='small'
+                            onChange={handleSearch}
+                            InputProps={{
+                              startAdornment: (
+                                <InputAdornment position='start'>
+                                  <SearchIcon/>
+                                </InputAdornment>
+                              ),
+                            }}
+                          />
+                     </Link>
                   </li>
                 </ul>
               </div>
@@ -59,6 +93,9 @@ function App() {
             {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
             <Switch>
+              <Route path='/search'>
+                <Search search={search} />
+              </Route>
               <Route path='/contact'>
                 <Contact />
               </Route>
