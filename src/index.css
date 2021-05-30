@@ -11,3 +11,176 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.background {
+  background: rgb(86,9,121);
+  background: radial-gradient(circle, rgba(86,9,121,.81) 10%, rgba(0,212,255,.5) 30%, rgba(255,255,255,1) 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.MainFrame {
+  background: rgb(255 255 255 / 60%);
+  /* background: radial-gradient(circle, rgba(0,212,255,1) -20%, rgba(255,255,255,1) 50%); */
+  width: 80vw;
+  height: 500px;
+  -webkit-backdrop-filter: blur(41px);
+  backdrop-filter: blur(41px);
+  box-shadow: 0px 0px 50px rgb(0 0 0 / 20%);
+  padding: 10px 30px;
+  max-width:800px;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.footer span{
+  float:right;
+}
+.footer {
+  font-size: 10px;
+  width: 100%;
+  padding: 0px 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  margin: 0;
+}
+
+.navbar-brand svg{
+  font-size: 14px;
+}
+.navbar-brand {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+  font-size: 11px;
+}
+
+.search svg{
+ font-size:13px; 
+}
+
+.imgslider .img-fluid {
+  width: 250px;
+}
+
+.flexbox .img-fluid {
+  width: auto;
+  margin-bottom: 20px;
+  max-height: 60px;
+}
+
+.btn-same {
+  background-color: rgb(34 141 255 / 78%) !important;
+}
+
+.area {
+  max-height: 380px;
+  overflow-y: scroll;
+}
+
+h6 {
+  font-size: .8rem;
+  margin-bottom: 5px;
+  font-weight: 400;
+} 
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p{
+  font-size: 13px;
+  line-height: initial;
+}
+
+.flexbox {
+  height: 380px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.imgslider {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background: radial-gradient(circle, rgba(0,212,255,.3) 10%, rgba(255,255,255,0) 50%);
+}
+
+.effect-bg {background: radial-gradient(circle, rgba(0,212,255,.3) 10%, rgba(255,255,255,0) 50%);}
+.effect-bg2 {
+  background: radial-gradient(circle, rgba(0,212,255,.3) 30%, rgba(255,255,255,0) 71%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.react-slideshow-zoom-wrapper img{
+  max-width: 250px;
+}
+.react-slideshow-zoom-wrapper {
+  text-align: center;
+}
+
+.react-slideshow-zoom-wrapper .zoom-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  min-height: 380px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.manage-arrow {
+  text-align: center;
+}
+.manage-arrow svg{
+  font-size: 52px;
+  margin-top: -60px;
+  color: #439cf7;
+  opacity: .5;
+}
+
+.expadding {
+  padding-top: 50px;
+}
+
+.expadding input,
+.expadding textarea {
+  font-size: 12px;
+}
+.expadding .MuiFormControl-root {
+  width: 100%;
+}
+.expadding .MuiInputBase-root {
+  margin-bottom: 20px;
+}
