@@ -1,6 +1,5 @@
 import React from 'react';
 import Data from '../ProductData.json'
-import { useState } from 'react'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
@@ -12,60 +11,60 @@ import Image1 from '../a1.png'
 
 const Search = ({ search }) => {
 
-  
+
 
     function filterData() {
         return Data.filter(
-          (pro) => 
-          pro.app.toLowerCase().includes(search.toLowerCase()) ||
-          pro.version.toLowerCase().includes(search.toLowerCase()) ||
-          pro.details.toLowerCase().includes(search.toLowerCase())
-          
+            (pro) =>
+                pro.app.toLowerCase().includes(search.toLowerCase()) ||
+                pro.version.toLowerCase().includes(search.toLowerCase()) ||
+                pro.details.toLowerCase().includes(search.toLowerCase())
+
         )
-      }
+    }
 
     return (
         <div className='area'>
             <div className='container'>
                 <div className='row'>
-                        
-                        <div className='col-sm-12 col-md-12'>
-                             
-                                 
+
+                    <div className='col-sm-12 col-md-12'>
+
+
                         {filterData(Data).map(
                             pro => (
-                                 
+
                                 <List className='searchList'>
                                     <ListItem alignItems="flex-start" key={pro.id}>
                                         <ListItemAvatar>
-                                        <Avatar src={Image1} />
+                                            <Avatar src={Image1} />
                                         </ListItemAvatar>
                                         <ListItemText
-                                        primary={pro.app} 
-                                        secondary={
-                                            <React.Fragment>
-                                            <Typography
-                                                component="span"
-                                                variant="body2"
-                                                className='searchType'
-                                                color="textPrimary"
-                                            > 
-                                            </Typography>{pro.version} -&nbsp;
+                                            primary={pro.app}
+                                            secondary={
+                                                <React.Fragment>
+                                                    <Typography
+                                                        component="span"
+                                                        variant="body2"
+                                                        className='searchType'
+                                                        color="textPrimary"
+                                                    >
+                                                    </Typography>{pro.version} -&nbsp;
                                             {pro.details}<br />
-                                            
-                                            </React.Fragment>
-                                        }
+
+                                                </React.Fragment>
+                                            }
                                         />
                                     </ListItem>
                                     <Divider variant="inset" component="li" />
-                                </List>           
-                        ))}
+                                </List>
+                            ))}
 
-                             
-                        </div>
-                        
+
+                    </div>
+
                 </div>
-            </div>                
+            </div>
         </div>
     )
 }

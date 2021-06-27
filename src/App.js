@@ -16,15 +16,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
 
-  const [ expand, setExpand ] = useState(false)
-  const [ search, setSearch ] = useState('')
- 
+  const [expand, setExpand] = useState(false)
+  const [search, setSearch] = useState('')
+
   function handleSearch(e) {
     setSearch(e.target.value)
   }
@@ -39,95 +39,95 @@ function App() {
     return <p className='footer'>© Copyright 2021 <span>+61 444 333 222</span></p>;
   }
 
-  
+
   return (
     <div className='App'>
       <div className='background'>
         <div className='MainFrame'>
-          
-        <Router>
-          <div>
-            <nav className='navbar navbar-expand-md navbar-light'>
-              <a href='/' className='navbar-brand'><GrainOutlinedIcon /> WebApp</a>
-              <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
-                <span className='navbar-toggler-icon'></span>
-              </button>
-              <div className='collapse navbar-collapse flex-end' id='navbarNav'>
-                <ul className='navbar-nav'>
-                  <li className='nav-item'>
-                    <Link className='nav-link' to='/' onClick={closeSearch}>Home</Link>
-                  </li>
-                  <li className='nav-item'>
-                    <Link className='nav-link' to='/products' onClick={closeSearch}>Products</Link>
-                  </li>
-                  <li className='nav-item'>
-                    <Link className='nav-link' to='/services' onClick={closeSearch}>Services</Link>
-                  </li>
-                  <li className='nav-item'>
-                    <Link className='nav-link' to='/about' onClick={closeSearch}>About</Link>
-                  </li>
-                  <li className='nav-item'>
-                    <Link className='nav-link' to='/contact' onClick={closeSearch} >Contact</Link>
-                  </li>
-                  <li className='nav-item'>
-                    <Link className={'nav-link searchBox '  + (expand && 'expand')} onClick={handleExpand} to='/search'>
-                    
-                          <TextField
-                            className='searchIconBar'
-                            id='searh'
-                            size='small'
-                            onChange={handleSearch}
-                            InputProps={{
-                              startAdornment: (
-                                <InputAdornment position='start'>
-                                  <SearchIcon/>
-                                </InputAdornment>
-                              ),
-                            }}
-                          />
-                     </Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
 
-            {/* A <Switch> looks through its children <Route>s and
+          <Router>
+            <div>
+              <nav className='navbar navbar-expand-md navbar-light'>
+                <a href='/' className='navbar-brand'><GrainOutlinedIcon /> WebApp</a>
+                <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+                  <span className='navbar-toggler-icon'></span>
+                </button>
+                <div className='collapse navbar-collapse flex-end' id='navbarNav'>
+                  <ul className='navbar-nav'>
+                    <li className='nav-item'>
+                      <Link className='nav-link' to='/' onClick={closeSearch}>Home</Link>
+                    </li>
+                    <li className='nav-item'>
+                      <Link className='nav-link' to='/products' onClick={closeSearch}>Products</Link>
+                    </li>
+                    <li className='nav-item'>
+                      <Link className='nav-link' to='/services' onClick={closeSearch}>Services</Link>
+                    </li>
+                    <li className='nav-item'>
+                      <Link className='nav-link' to='/about' onClick={closeSearch}>About</Link>
+                    </li>
+                    <li className='nav-item'>
+                      <Link className='nav-link' to='/contact' onClick={closeSearch} >Contact</Link>
+                    </li>
+                    <li className='nav-item'>
+                      <Link className={'nav-link searchBox ' + (expand && 'expand')} onClick={handleExpand} to='/search'>
+
+                        <TextField
+                          className='searchIconBar'
+                          id='searh'
+                          size='small'
+                          onChange={handleSearch}
+                          InputProps={{
+                            startAdornment: (
+                              <InputAdornment position='start'>
+                                <SearchIcon />
+                              </InputAdornment>
+                            ),
+                          }}
+                        />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
-            <Switch>
-              <Route path='/search'>
-                <Search search={search} />
-              </Route>
-              <Route path='/contact'>
-                <Contact />
-              </Route>
-              <Route path='/about'>
-                <About />
-              </Route>
-              <Route path='/services'>
-                <Services />
-              </Route>
-              <Route path='/products'>
-                <Products />
-              </Route>
-              <Route path='/'>
-                <Home />
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-        <Footer />
+              <Switch>
+                <Route path='/search'>
+                  <Search search={search} />
+                </Route>
+                <Route path='/contact'>
+                  <Contact />
+                </Route>
+                <Route path='/about'>
+                  <About />
+                </Route>
+                <Route path='/services'>
+                  <Services />
+                </Route>
+                <Route path='/products'>
+                  <Products />
+                </Route>
+                <Route path='/'>
+                  <Home />
+                </Route>
+              </Switch>
+            </div>
+          </Router>
+          <Footer />
         </div>
       </div>
       <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={true}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
       />
     </div>
   );
